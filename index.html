@@ -103,6 +103,18 @@
             color: #cccccc;
         }
 
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #ffffff;
+        }
+
+        .social-links a {
+            color: #FFD700;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 1.5rem;
@@ -120,15 +132,12 @@
             .counter {
                 font-size: 1rem;
             }
+
+            .footer {
+                font-size: 0.8rem;
+            }
         }
     </style>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5568P3S3');</script>
-<!-- End Google Tag Manager -->
 </head>
 
 <body>
@@ -158,6 +167,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
 
         <p class="small">Last Victory: June 6, 2015</p>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2024 Created by Shi_d30</p>
+            <div class="social-links">
+                <a href="https://telegram.me/shi_d30" target="_blank">Telegram</a> |
+                <a href="https://instagram.com/shi_d30" target="_blank">Instagram</a> |
+                <a href="https://x.com/shi_d30" target="_blank">X (Twitter)</a>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -190,21 +209,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             const digitalHours = (hours % 24).toString().padStart(2, '0');
             const digitalMinutes = (minutes % 60).toString().padStart(2, '0');
             const digitalSeconds = (seconds % 60).toString().padStart(2, '0');
-
-            document.getElementById('digital-counter').textContent =
-                `${digitalYears}:${digitalMonths}:${digitalDays}:${digitalHours}:${digitalMinutes}:${digitalSeconds}`;
+            document.getElementById('digital-counter').textContent = `${digitalYears}:${digitalMonths}:${digitalDays}:${digitalHours}:${digitalMinutes}:${digitalSeconds}`;
         }
 
-        // Update the counters every second
         setInterval(updateCounters, 1000);
-
-        // Initialize the counters immediately
-        updateCounters();
     </script>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5568P3S3"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 </body>
 
 </html>
