@@ -28,7 +28,6 @@
         body {
             font-family: 'Roboto', sans-serif;
             background: linear-gradient(135deg, #004B87, #A50044);
-            /* FC Barcelona colors */
             color: #ffffff;
             margin: 0;
             padding: 0;
@@ -41,7 +40,6 @@
 
         .container {
             background: linear-gradient(135deg, #004B87, #A50044);
-            /* FC Barcelona gradient */
             padding: 30px 40px;
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
@@ -66,7 +64,6 @@
             font-size: 2rem;
             margin-bottom: 20px;
             color: #FFD700;
-            /* Gold for Champions League */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
@@ -75,7 +72,6 @@
             margin: 20px 0;
             font-weight: bold;
             color: #FFD700;
-            /* Gold for digital counter */
             letter-spacing: 5px;
             background: #000000;
             padding: 10px 15px;
@@ -88,13 +84,11 @@
             margin: 10px 0;
             font-weight: bold;
             color: #FFD700;
-            /* Gold for counter values */
         }
 
         .value {
             font-size: 1.3rem;
             color: #FFD700;
-            /* Yellow for counter values */
         }
 
         .small {
@@ -142,21 +136,17 @@
 
 <body>
     <div class="container">
-        <!-- Logos -->
         <div class="logos">
             <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png"
                 alt="FC Barcelona Logo">
         </div>
 
-        <!-- Title -->
         <h1>Time Since FC Barcelona's Last Champions League Victory</h1>
 
-        <!-- Digital Counter -->
         <div class="digital-counter" id="digital-counter">
             00:00:00:00:00:00
         </div>
 
-        <!-- Detailed Counter -->
         <div class="counter">
             <div><span class="value" id="years">0</span> Years</div>
             <div><span class="value" id="months">0</span> Months</div>
@@ -168,32 +158,30 @@
 
         <p class="small">Last Victory: June 6, 2015</p>
 
-        <!-- Footer -->
-     <div class="footer">
-    <p>&copy; 2024 Created by Shi_d30</p>
-    <div class="social-links">
-        <a href="https://telegram.me/shi_d30" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" style="width: 24px; height: 24px;">
-        </a>
-        <a href="https://instagram.com/shi_d30" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; height: 24px;">
-        </a>
-        <a href="https://x.com/shi_d30" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="X (Twitter)" style="width: 24px; height: 24px;">
-        </a>
-    </div>
-</div>
+        <div class="footer">
+            <p>&copy; 2024 Created by Shi_d30</p>
+            <div class="social-links">
+                <a href="https://telegram.me/shi_d30" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" style="width: 24px; height: 24px;">
+                </a>
+                <a href="https://instagram.com/shi_d30" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; height: 24px;">
+                </a>
+                <a href="https://x.com/shi_d30" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="X (Twitter)" style="width: 24px; height: 24px;">
+                </a>
+            </div>
+        </div>
 
     </div>
 
     <script>
-        const victoryDate = new Date("2015-06-06T00:00:00Z"); // Replace with the actual victory date
+        const victoryDate = new Date("2015-06-06T00:00:00Z");
 
         function updateCounters() {
             const now = new Date();
             const diff = now - victoryDate;
 
-            // Calculate detailed time
             const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
             const months = Math.floor(diff / (1000 * 60 * 60 * 24 * 30));
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -201,7 +189,6 @@
             const minutes = Math.floor(diff / (1000 * 60));
             const seconds = Math.floor(diff / 1000);
 
-            // Update detailed counter
             document.getElementById('years').textContent = years;
             document.getElementById('months').textContent = months;
             document.getElementById('days').textContent = days;
@@ -209,7 +196,6 @@
             document.getElementById('minutes').textContent = minutes;
             document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
 
-            // Update digital counter
             const digitalYears = years.toString().padStart(2, '0');
             const digitalMonths = (months % 12).toString().padStart(2, '0');
             const digitalDays = (days % 30).toString().padStart(2, '0');
